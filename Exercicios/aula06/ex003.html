@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 proejeto de JavaSript</title>
+    <style>
+        body {
+            background-color: #deb887;
+        }
+
+        h1 {
+            display: block;
+            margin: auto;
+            align-items: center;
+            padding: 10px 20px;
+            width: 200px;
+            margin-top: 100px;
+            background-color: #fff8dc;
+            border-radius: 20px;
+            font-weight: 600;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: color .5s, transform .5s;
+            font-weight: bolder;
+        }
+
+        p:hover {
+            color: rgba(65, 65, 65, 0.342);
+            transform: translateY(-3px);
+        }
+        
+    </style>
+ </head>
+ <body>
+    <h1>Olá, mundo!</h1>
+    <p>Livre da maldição kkkkkkkkk</p>
+    <script>
+        var n1 = Number(window.prompt('Digite seu ano atual:')) // string
+        var n2 = Number(window.prompt('Qual é o seu ano de nascimento? ')) // string
+        var s = n1 - n2
+        window.alert(`Você tem ${s} anos de idade.`)
+        // (number + number) para adição
+        // (string + string) para concatenação
+    </script>
+ </body>
+ </html>
