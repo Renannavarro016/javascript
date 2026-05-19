@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            width: 8%;
+            padding: 5px;
+            background-color: rgb(116, 158, 235);
+            border-radius: 10px;
+            border-color: black;
+            color: white;
+        }
+
+        .botao {
+            background-color: black;
+            border-radius: 7px;
+            width: 100px;
+            height: 35px;
+            margin: 20px;
+            font-weight: bolder;
+            transition: background-color .5s;
+        }
+
+        .botao:hover {
+            background-color: rgba(0, 0, 0, 0.658);
+        }
+
+        #res {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: cornsilk;
+            width: fit-content;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()" class="botao">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            var n1 = Number.parseFloat(document.getElementById('txtn1').value)
+            var n2 = Number.parseFloat(document.getElementById('txtn2').value)
+            var res = document.querySelector('div#res')
+            res.innerHTML = `A soma de ${n1} + ${n2} é = ` + Number(n1+n2)
+        }
+    </script>
+</body>
+</html>

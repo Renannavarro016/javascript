@@ -1,0 +1,82 @@
+Operadores relacionais:
+
+>	- Maior que...
+<	- Menor que...
+>=	- Maior ou igual que...
+<=	- Menor ou igual que...
+==	- Igual a...
+!=	- Diferente de...
+
+
+- Exemplos:
+
+7 > 4		True		- 7 é maior do que 4? Sim
+8 < 9		True		- 8 é menor do que 9? Sim
+3 >= 3 	True		- 3 é menor ou igual do que 3? Sim
+5 <= 2	False		- 5 é menor ou igual do que 2? Não
+9 == 9	True		- 9 é igual do que 9? Sim
+6 != 6	False		- 6 é diferente de 6? Não
+
+Obs: os operadores relacionais analizam somente o valor e não o tipo
+
+
+Operadores de identidade:
+
+===	- É identico a...
+
+- Exemplo:
+
+5 === '5'	Mesmo valor e mesmo tipo?	- Não são identicos	- False
+5 === '5' 	Mesmo valor e mesmo tipo?	- São identicos		- True
+
+Obs: os operadores de identidade vão analizar se a variável são do mesmo tipo e se tem o mesmo valor
+
+
+Operadores lógico:
+
+!	- Negação		- Equivalente ao 'no' no python
+&&	- Conjunção		- Equivalente ao 'and' no python
+||	- Disjunção		- Equivalente ao 'or' no python
+
+
+- Exemplo:
+
+! True		- Retorna False
+! False		- Retorna True
+
+True  && True	- Retorna True
+True  && False	- Retorna False
+False && False	- Retorna True
+False && True	- Retorna False
+
+True  || True	- Retorna True
+True  || False	- Retorna True
+False || False	- Retorna False
+False || True	- Retorna True
+
+
+Ordem de preceção dos operadores:
+
+1 - Operadores aritiméticos
+2 - Operadores de relacionais
+3 - Operadores lógicos
+
+
+Odem de preceção dos operadores lógicos:
+
+1 - !
+2 - &&
+3 - ||
+
+
+Operadores ternários:
+
+Teste ? True : False
+
+
+- Exemplo:
+
+var nota = 4
+
+nota =< 5 ? 'APROVADO' : 'REPROVADO'
+>'REPROVADO'

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+</head>
+<style>
+    body {
+        background-color: rgb(69, 125, 199);
+        color: white;
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+    }
+</style>
+<body>
+    <h1>Iniciando o estudo sobre DOM</h1>
+    <p>Resultado aqui</p>
+    <p class="pr">Aprendendo a usar <strong>DOM</strong> com JavaScript.</p>
+    <div class="msg">clique aqui!</div>
+    <script>
+        var corpo = document.body
+        // let d = window.document.getElementById('msg')
+        // d.style.backgroundColor = 'black'
+        // d.innerText = 'Loading...'
+
+        // let d = window.document.getElementsByClassName('msg')[0]
+        // d.innerText = 'Olá mundo!'
+
+
+        // Um exemplo do que pode se fazer com DOM
+        var d = window.document.querySelector('div.msg')
+        d.style.backgroundColor = 'blue'
+        d.style.padding = '15px'
+        d.style.width = 'fit-content'
+        d.style.borderRadius = '10px'
+        d.style.boxShadow = '2px 2px 1px 1px black'
+        d.style.margin = '10px 20px 10px 20px'
+        d.style.margin = '10px 20px 10px 20px'
+        </script>
+</body>
+</html> 
