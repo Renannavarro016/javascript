@@ -53,6 +53,7 @@
             border-radius: 10px;
             border: 1px solid black;
             margin-left: 10px;
+            font-weight: 500;
         }
 
         #tabela {
@@ -69,12 +70,14 @@
 
         p {
             font-weight: bolder;
-            font-size: .9em;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
     <h1>Cálculo de porcentagem % de um produto 🛒📦</h1>
+    <br>
+    <br>
     <div id="tabela">
         <p>Preço $</p>
         <input type="number" name="preco" id="preco" >
@@ -89,7 +92,7 @@
             var p = Number.parseFloat(document.getElementById('preco').value)
             var d = Number.parseFloat(document.getElementById('desconto').value)
             var res = document.querySelector('div#res')
-            res.innerHTML = `A sua compra no valor de <strong>${p},00$</strong> com um desconto de <strong>${d}%</strong> passará a ter o valor de <strong>` + Number.parseFloat(p-(p*d/100)) + ',00$</strong> em sua compra!'
+            res.innerHTML = `A sua compra no valor de <strong>${p},00$</strong> com um desconto de <strong>${d}%</strong> passará a ter o valor de <strong>` + Number.parseFloat(p-(p*d/100)) + '$</strong> em sua compra!'
         }
     </script>
     <script src="https://kit.fontawesome.com/19d3b07e42.js" crossorigin="anonymous"></script>
