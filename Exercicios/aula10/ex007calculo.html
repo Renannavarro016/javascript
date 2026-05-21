@@ -41,7 +41,7 @@
             background-color: rgba(0, 0, 0, 0.658);
         }
 
-        #res {
+        #res, #res2 {
             display: block;
             margin: auto;
             position: absolute;
@@ -56,7 +56,7 @@
             font-weight: 500;
         }
 
-        #tabela {
+        #tabela, #tabela2 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -66,6 +66,18 @@
             border-radius: 10px;
             height: 280px;
             box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.425);
+        }
+
+        #tabela h2 {
+            position: absolute;
+            top: 170px;
+            left: auto;
+        }
+
+        #tabela2 h2 {
+            position: absolute;
+            top: 490px;
+            left: auto;
         }
 
         p {
@@ -79,20 +91,38 @@
     <br>
     <br>
     <div id="tabela">
+        <h2>Desconto 📉</h2>
         <p>Preço $</p>
         <input type="number" name="preco" id="preco" >
         <p>Desconto %</p>
         <input type="number" name="desconto" id="desconto">
-        <input type="button" value="Calcular" onclick="calcular()" class="botao">
+        <input type="button" value="Calcular" onclick="calcularDesc()" class="botao">
         <div id="res">Resultado</div>
+    </div>
+    <br>
+     <div id="tabela2">
+        <h2>Aumento 📈</h2>
+        <p>Valor $</p>
+        <input type="number" name="valor" id="valor" >
+        <p>Aumento %</p>
+        <input type="number" name="aumento" id="aumento">
+        <input type="button" value="Calcular" onclick="calcularAume()" class="botao">
+        <div id="res2">Resultado</div>
     </div>
 
     <script>
-        function calcular() {
+        function calcularDesc() {
             var p = Number.parseFloat(document.getElementById('preco').value)
             var d = Number.parseFloat(document.getElementById('desconto').value)
             var res = document.querySelector('div#res')
             res.innerHTML = `A sua compra no valor de <strong>${p},00$</strong> com um desconto de <strong>${d}%</strong> passará a ter o valor de <strong>` + Number.parseFloat(p-(p*d/100)) + '$</strong> em sua compra!'
+        }
+
+        function calcularAume() {
+            var v = Number.parseFloat(document.getElementById('valor').value)
+            var a = Number.parseFloat(document.getElementById('aumento').value)
+            var res2 = document.querySelector('div#res2')
+            res2.innerHTML = `O produto ou salário com um valor de <strong>${v}$</strong> com um aumento de <strong>${a}%</strong> passará a ter o valor de <strong>` + Number.parseFloat(v+(v*a/100)) + '$</strong>'
         }
     </script>
 </body>
