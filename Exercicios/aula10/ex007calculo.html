@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo em Produtos</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 25%;
+            padding: 5px;
+            margin: 10px;
+            background-color: rgb(116, 158, 235);
+            border-radius: 10px;
+            border-color: black;
+            color: white;
+        }
+
+        .botao {
+            background-color: black;
+            border-radius: 7px;
+            width: 100px;
+            height: 35px;
+            margin: 20px;
+            font-weight: bolder;
+            transition: background-color .5s;
+        }
+
+        .botao:hover {
+            background-color: rgba(0, 0, 0, 0.658);
+        }
+
+        #res {
+            display: block;
+            margin: auto;
+            position: absolute;
+            left: 20px;
+            margin-top: 200px;
+            padding: 10px;
+            background-color: cornsilk;
+            width: 400px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-left: 10px;
+        }
+
+        #tabela {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(169, 169, 169, 0.637);
+            border-radius: 10px;
+            height: 250px;
+            box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.425);
+        }
+
+        p {
+            font-weight: bolder;
+            font-size: .9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de porcentagem % de um produto 🛒📦</h1>
+    <div id="tabela">
+        <p>Preço $</p>
+        <input type="number" name="preco" id="preco" >
+        <p>Desconto %</p>
+        <input type="number" name="desconto" id="desconto">
+        <input type="button" value="Calcular" onclick="calcular()" class="botao">
+        <div id="res">Resultado</div>
+    </div>
+
+    <script>
+        function calcular() {
+            var p = Number.parseFloat(document.getElementById('preco').value)
+            var d = Number.parseFloat(document.getElementById('desconto').value)
+            var res = document.querySelector('div#res')
+            res.innerHTML = `A sua compra no valor de <strong>${p},00$</strong> com um desconto de <strong>${d}%</strong> passará a ter o valor de <strong>` + Number.parseFloat(p-(p*d/100)) + ',00$</strong> em sua compra!'
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/19d3b07e42.js" crossorigin="anonymous"></script>
+</body>
+</html>
