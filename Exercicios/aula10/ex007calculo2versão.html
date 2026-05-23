@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de %</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: block;
+            margin: auto;
+            padding: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+        }
+
+        main h1, h3 {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #tabela, #tabela2 {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.555), rgba(0, 0, 255, 0.473));
+            border-radius: 5px;
+        }
+
+        #tabela h2, #tabela2 h2 {
+            font-size: 1.1em;
+        }
+
+        #tabela input, #tabela2 input {
+            gap: 10px;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: rgba(46, 46, 184, 0.336);
+            color: white;
+            font-size: 1em;
+            transition: border 0.5s;
+        }
+
+        #tabela input:hover, #tabela2 input:hover {
+            border: 1px rgb(255, 255, 255) solid;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        #tabela .botao, #tabela2 .botao2 {
+            margin-top: 58px;
+            padding: 10px 15px;
+            transition: background-color .5s, transform .5s;
+            background-color: black;
+        }
+
+        #tabela .botao:hover, #tabela2 .botao2:hover {
+            background-color: rgba(0, 0, 70, 0.603);
+        }
+
+        main .res, .res2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            font-size: 1em;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Cálculo de Porcentagem % 🛒💸</h1>
+        <br>
+        <br>
+        <div id="tabela">
+            <div>
+                <h2>Preço $</h2>
+                <input type="number" name="preco" id="preco">
+            </div>
+            <div>
+                <h2>Desconto 📉</h2>
+                <input type="number" name="desc" id="desc">
+            </div>
+            <input type="button" value="Calcular" onclick="calcular()" class="botao">
+        </div>
+        <div class="res">Resultado</div>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="tabela2">
+            <div>
+                <h2>Valor $</h2>
+                <input type="number" name="valor" id="valor">
+            </div>
+            <div>
+                <h2>Aumento 📈</h2>
+                <input type="number" name="aumen" id="aumen">
+            </div>
+            <input type="button" value="Calcular" onclick="aumento()" class="botao2">
+        </div>
+        <div class="res2">Resultado</div>
+    </main>
+    <script>
+        function calcular() {
+            var p = Number.parseFloat(document.getElementById('preco').value)
+            var d = Number.parseFloat(document.getElementById('desc').value)
+            var res = document.querySelector('div.res')
+            res.innerHTML = `O produto ou salário no valor de ${p}R$ com ${d}% de desconto o valor passa a ficar ${Number(p-(p*d/100))}R$.`
+        }
+
+         function aumento() {
+            var v = Number.parseFloat(document.getElementById('valor').value)
+            var a = Number.parseFloat(document.getElementById('aumen').value)
+            var res2 = document.querySelector('div.res2')
+            res2.innerHTML = `O produto ou salário no valor de ${v}R$ com ${a}% de aumento o valor passa a ficar ${Number(v+(v*a/100))}R$.`
+        }
+    </script>
+</body>
+</html>
