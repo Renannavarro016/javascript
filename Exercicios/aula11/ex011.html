@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            padding-bottom: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .box {
+            display: block;
+            margin: auto;
+            text-align: center;
+            width: fit-content;
+            background-color: rgba(0, 0, 0, 0.795);
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            font-weight: bolder;
+        }
+
+        .box input {
+            border-radius: 5px;
+            padding: 7px;
+            margin: 5px;
+            transition: background-color .5s, color .5s;
+        }
+
+        .box input::placeholder {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.322);
+        }
+
+        .box input:hover {
+            background-color: rgb(212, 135, 80);
+            color: white;
+        }
+
+        .box input:hover::placeholder {
+            color: rgba(255, 255, 255, 0.822);
+        }
+
+        .box .btn {
+            background-color: chocolate;
+            color: white;
+            padding: 5px 10px 5px 10px;
+            font-weight: bolder;
+            font-size: 0.8em;
+        }
+
+        .box .btn:hover {
+            background-color: rgba(0, 0, 0, 0.582);
+        }
+
+        .res {
+            background-color: rgb(230, 129, 57);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consulte sua Nacionalidade</h1>
+    <div>
+        <div class="box">
+            Qual é o país que você mora? <input type="text" name="Pais" id="pais" style="width: 90px;" placeholder="Digite o país">
+            <input type="button" value="Consultar" onclick="cons()" class="btn"> 
+            <br>
+            <br>
+            <hr>
+            <br>
+            <div class="res">Resposta</div>
+        </div>
+    </div>
+    <script>
+       function cons() {
+            var p = String(document.getElementById('pais').value)
+            var res = document.querySelector('div.res')
+            res.innerHTML = `<p>Que prazer te encontrar. Bem-vindo a <strong>${p}</strong>!!`
+            if (p == 'Brasil') {
+                res.innerHTML += `<p>Olá seja bem-vindo, fico feliz em saber que você é <strong>brasileiro</strong>!</p>`
+            } else {
+                 res.innerHTML += '<p>Olá, seja bem-vindo, que legal, você é um <strong>estrangeiro</strong>!!</p>'
+            }
+            res.innerHTML += '<p>Tenha um bom proveito da sua cidadânia em seu país.</p>'
+       }
+    </script>
+</body>
+</html>

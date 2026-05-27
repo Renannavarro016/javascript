@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <div>
+        <div class="box">
+            Velocidade do carro <input type="number" name="Vlz" id="vlz" style="width: 70px;">
+            <input type="button" value="Medir" onclick="medir()"> km
+            <div class="res"></div>
+        </div>
+    </div>
+    <script>
+       function medir() {
+            var veloz = document.getElementById('vlz').value
+            var res = document.querySelector('div.res')
+            res.innerHTML = `<p>A velocidade atual do seu veículo é de <strong>${veloz}</strong> km/h</p>`
+            if (veloz > 60) {
+                res.innerHTML += `<p>Você ultrapassou o limite de velocidade <strong>(60 km/h)</strong> por isso, tomará uma <strong>MULTA</strong> no valor de <strong>R$130,00</strong></p>`
+            } else {
+                 res.innerHTML += '<p>Ok, você está dentro do limite permitido pela lei.</p>'
+            }
+            res.innerHTML += '<p>Dirija com cinto de segurança, salve vidas!!</p>'
+       }
+    </script>
+</body>
+</html>
