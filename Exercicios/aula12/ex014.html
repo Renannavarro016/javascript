@@ -121,13 +121,14 @@
         var res = document.querySelector('div#res')
         var b = document.querySelector('body')
         var img = document.querySelector('div#ft')
+        var hora = 7
         if (hora <= 5) {
             res.innerHTML = `<p>Agora são ${hora}:${min} da madrugada <i class="fa-solid fa-cloud-moon"></i><p>`
                 b.style.backgroundImage = 'linear-gradient(90deg, rgba(39, 39, 39, 0.829), rgba(0, 0, 0, 0.925))'
                 img.innerHTML = '<img src="https://img.freepik.com/fotos-premium/trafego-urbano_271102-52.jpg" alt="foto" class="foto">'
         } else if (hora < 12) {
             res.innerHTML = `<p>Agora são ${hora}:${min} da manhã <i class="fa-solid fa-sun"></i>`
-                b.style.backgroundImage = 'linear-gradient(90deg, rgb(148, 184, 250), rgb(255, 239, 151))'
+                b.style.backgroundImage = 'linear-gradient(90deg, rgb(148, 194, 390), rgb(265, 229, 200))'
                 img.innerHTML = '<img src="https://img.freepik.com/fotos-gratis/vista-inspiradora-da-luz-da-manha_23-2148851773.jpg" alt="foto" class="foto">'
         } else if (hora >= 12 && hora < 18) {
             res.innerHTML = `<p>Agora são ${hora}:${min} da tarde <i class="fa-solid fa-cloud-sun"></i>`
