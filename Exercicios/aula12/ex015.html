@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(57, 57, 206);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 200px;
+        }
+
+        #form {
+            padding: 30px;
+            gap: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 2px 2px 2px 3px black;
+        }
+
+        #form p {
+            padding: 7px;
+            margin: 5px;
+            gap: 10px;
+        }
+
+        #form p .anos {
+            padding: 2px;
+            margin: 5px;
+            border-radius: 10px;
+            transition: transform .5s;
+        }
+
+        #form .btn {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.26);
+            background-image: linear-gradient(90deg, rgb(89, 89, 219), rgb(164, 164, 243));
+            color: white;
+            transition: transform .5s;
+        }
+
+
+        #form .btn:hover {
+            transform: scale(1.06);
+        }
+
+        #form #resultado {
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #form .foto {
+            display: block;
+            margin: auto;
+            width: 50%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique a sua idade</h1>
+    <main>
+        <div id="form">
+            <p>Ano de Nascimento: <input type="number" name="ano" id="ano" class="anos"></p>
+            <p>Sexo: 
+            <input type="radio" name="sexo" class="man"> Homem
+            <input type="radio" name="sexo" class="wom"> Mulher
+            </p>
+            <input type="button" value="Verificar" onclick="checar()" class="btn">
+            <div id="resultado"></div>
+            <div>
+                <img id="foto" class="foto">
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function checar() {
+            let ano = new Date().getFullYear()
+            var idd = document.getElementById('ano').value
+            var Homem = document.querySelector('.man').checked
+            var Mulher = document.querySelector('.wom').checked
+            var img = document.querySelector('#foto')
+            var resp = document.querySelector('div#resultado')
+
+            var idade = ano-idd
+            
+            if (Homem) {
+                Homem = 'Homem'
+                resp.innerHTML = `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                img.src = 'https://img.magnific.com/fotos-gratis/homem-retrato-rindo_23-2148859448.jpg?semt=ais_hybrid&w=740&q=80'
+
+                if (idade <= 2) {
+                    Homem = 'Criança'
+                    resp.innerHTML = `<p>Você é uma <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://www.escolaespacodacrianca.com.br/wp-content/uploads/2023/06/Crianca-2-anos.jpg'
+                } else if (idade <= 5) {
+                    Homem = 'Criança'
+                    resp.innerHTML = `<p>Você é uma <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://conteudo.brandili.com.br/wp-content/uploads/2024/12/portrait-of-a-laughing-little-boy-portrait-in-a-d-2023-11-27-05-26-35-utc-851x851.jpg'
+                } else if (idade < 10) {
+                    Homem = 'Criança'
+                    resp.innerHTML = `<p>Você é uma <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://brstatic.guiainfantil.com/pictures/materias/22310-o-que-as-criancas-de-10-anos-aprendem.jpg'
+                } else if (idade >= 10 && idade <= 15) {
+                    Homem = 'Menino'
+                    resp.innerHTML = `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://img.freepik.com/fotos-premium/jovem-bonito-persa-adolescente-parecendo-enojado_251136-23092.jpg?w=360'
+                } else if (idade > 15 && idade <= 21) {
+                    `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDgPcAtXVGqpCF_75A7OJvKbUE9phFpAnamQ&s'
+                } else if (idade >= 30 && idade <= 50) {
+                    `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://media.istockphoto.com/id/981749414/pt/foto/positive-and-professional-everything-you-want-in-an-entrepreneur.jpg?s=612x612&w=0&k=20&c=aNy7D5fUBBvoUnfq1PJuTxedDuPkbXpF3rqOIgMB6iE='
+                } else if (idade > 50 && idade < 70) {
+                    `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://st3.depositphotos.com/4435155/34775/i/450/depositphotos_347756401-stock-photo-portrait-pensive-serious-senior-man.jpg'
+                } else if (idade >= 70) {
+                   `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://img.freepik.com/fotos-premium/velhinho-apto-de-bermuda-e-camiseta-sem-mangas-corre-ao-ar-livre-na-natureza_341862-149.jpg'
+                } else if (idade >= 90) {
+                    resp.innerHTML = `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos. Parabéns, você recebeu a benção da virtude de Deus!</p>`
+                    img.src = 'https://www.bahiaja.com.br/include/foto.php?file=2013-10-06_n-65021_115654.jpg'
+                }
+            } 
+            
+            if (Mulher) {
+                Mulher = 'Mulher'
+                resp.innerHTML = `Você é uma <strong>${Mulher}</strong> e tem <strong>${idade}</strong> anos.</p>`
+                img.src = 'https://media.istockphoto.com/id/1915382108/pt/foto/smiling-friendly-confident-millennial-caucasian-lady-manager-teacher-in-formal-wear-with.jpg?s=612x612&w=0&k=20&c=_KsdnAB8-y8tOt8sC0rSOas0i6LhM81F5GlE54aowAo='
+                
+                if (idade <= 2) {
+                    Mulher = 'Criança'
+                    resp.innerHTML = `<p>Você é uma <strong>${Mulher}</strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://i.pinimg.com/736x/a3/35/82/a335828a939752338419317d06a9592d.jpg'
+                } else if (idade <= 5) {
+                    Mulher = 'Criança'
+                    resp.innerHTML = `<p>Você é uma <strong>${Mulher}</strong> e tem <strong>${idade}</strong> anos.`
+                    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFRWir4gt80xCdoN8_Vyl0tXspXf4I4NjKnQ&s'
+                } else if (idade < 10) {
+                    Mulher = 'Menina'
+                    resp.innerHTML = `<p>Você é uma <strong> ${Mulher} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://i.pinimg.com/736x/5f/e8/f6/5fe8f6a3b70860205a260e4e5ec8a041.jpg'
+                } else if (idade >= 10 && idade <= 15) {
+                    Mulher = 'Menina'
+                    resp.innerHTML = `<p>Você é um <strong> ${Mulher} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://storage.alboom.ninja/sites/2356/albuns/770822/ensaio-debutante-15anos-cavalo-3.jpg?t=1610922349'
+                } else if (idade > 15 && idade <= 21) {
+                    resp.innerHTML = `<p>Você é uma <strong> ${Mulher} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcP_xEa6dH9pQXudS7VPk9_8QQA_hkQXeJQg&s'
+                } else if (idade >= 30 && idade <= 50) {
+                    resp.innerHTML = `<p>Você é um <strong> ${Mulher} </strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://img.freepik.com/fotos-premium/feliz-atraente-jovem-mulher-adulta-dona-de-casa-sentada-no-sofa-olhando-para-a-camera-em-casa-moderna-aconchegante-sorrindo-solteiro-20s-senhora-rosto-bonito-tomando-uma-selfie-sozinho-desfrutar-de-bem-estar-posando-para-retrato-xa_516988-4938.jpg'
+                } else if (idade > 50 && idade < 70) {
+                    resp.innerHTML = `<p>Você é um <strong>${Mulher}</strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://admin.lucianapepino.com.br/wp-content/uploads/cheerful-middle-aged-woman-with-curly-hair-easy-resizecom.jpg'
+                } else if (idade >= 70) {
+                    resp.innerHTML = `<p>Você é um <strong>${Mulher}</strong> e tem <strong>${idade}</strong> anos.</p>`
+                    img.src = 'https://media.istockphoto.com/id/508032898/pt/foto/retrato-de-mulher-de-70-anos-de-idade.jpg?s=612x612&w=0&k=20&c=ke9S4X6C3RzY0uK0z3OV8E62_WqSU1APQU7Sxv4uYVg='
+                } else if (idade >= 90) {
+                    resp.innerHTML = `<p>Você é um <strong>${Mulher}</strong> e tem <strong>${idade}</strong> anos. Parabéns, você recebeu a benção da virtude de Deus!</p>`
+                    img.src = 'https://s2-g1.glbimg.com/Ub-dQChZXQSG0qSZ0nj3qVYUkis=/0x0:1066x1120/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/U/D/Ft7v6KTuKQ0CkYYTSO9A/whatsapp-image-2022-02-19-at-09.26.19.jpeg'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
