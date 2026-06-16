@@ -34,6 +34,7 @@
             transition: .5s;
         }
 
+        /* Caixa */
         #form {
             padding: 10px;
             gap: 10px;
@@ -44,12 +45,14 @@
             transition: .5s;
         }
 
+        /* Textos da caixa */
         #form p {
             padding: 7px;
             margin: 5px;
             gap: 10px;
         }
 
+        /* Input */
         #form p .anos {
             padding: 2px;
             padding-left: 12px;
@@ -58,6 +61,7 @@
             transition: transform .5s;
         }
 
+        /* Botão */
         #form .btn {
             margin: 10px;
             padding: 10px;
@@ -75,6 +79,7 @@
             box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.205);
         }
 
+        /* Respostas */
         #form #resultado {
             font-weight: 500;
             display: flex;
@@ -83,6 +88,7 @@
             padding: 10px;
         }
 
+        /* Imagens */
         #form .foto {
             display: block;
             margin: auto;
@@ -96,18 +102,21 @@
             box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.315);
         }
 
+        /* Linha do hr */
         #form hr {
             display: block;
             margin: auto;
             width: 90%;
         }
 
+        /* Remover objetos do input */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
         }
 
+        /* Creditos */
         a {
             position: relative;
             bottom: 160px;
@@ -125,11 +134,13 @@
             color: rgba(255, 255, 255, 0.308);
         }
 
+        /* icone */
         a img {
             position: relative;
             bottom: -3px;
         }
 
+        /* Telas pequenas */
         @media screen and (max-width: 878px){
             #form  p {
                 font-size: 13px;
@@ -146,27 +157,55 @@
         }
     </style>
 </head>
+
 <body>
-    <h1>Verifique a sua idade 🎗️</h1>
+    <header>
+        <!-- Titulo -->
+        <h1>Verifique a sua idade 🎗️</h1>
+    </header>
+
     <main>
+        <!-- Caixa -->
         <div id="form">
-            <p>Ano de Nascimento: <input type="number" name="ano" id="ano" class="anos"></p>
+
+            <!-- Data -->
+            <p>Ano de Nascimento: 
+            <input type="number" name="ano" id="ano" class="anos"></p>
+
+            <!-- Escolha de gênero -->
             <p class="sex">Sexo:   
-            <input type="radio" name="sexo" class="man"> Homemㅤ<input type="radio" name="sexo" class="wom"> Mulher
+            <input type="radio" name="sexo" class="man"> Homemㅤ
+            <input type="radio" name="sexo" class="wom"> Mulher
             </p>
+
+            <!-- Botão -->
             <input type="button" value="Verificar" onclick="checar()" class="btn">
-            <br><br><br>
+            <br><br><br> 
+            
             <hr>
+            
+            <!-- Aparece o resultado do user -->
             <br>
-            <div id="resultado"></div>
+            <div id="resultado">
+            </div>
+
+            <!-- Imagens -->
             <div>
                 <img id="foto" class="foto">
             </div>
             <br>
+
         </div>
     </main>
-    <a href="https://www.instagram.com/renan_navarro15/" target="_blank">© Renan Navarro <img src="https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff" alt="" width="15px" height="15px"></a>
+
+    <footer>
+        <!-- Créditos -->
+        <a href="https://www.instagram.com/renan_navarro15/" target="_blank">© Renan Navarro <img src="https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff" alt="" width="15px" height="15px">
+        </a>
+    </footer>
+ 
     
+    <!-- Código por tras do projeto -->
     <script>
         function checar() {
             let ano = new Date().getFullYear()
@@ -176,7 +215,10 @@
             var img = document.querySelector('#foto')
             var resp = document.querySelector('div#resultado')
 
+            // Conta da idade
             var idade = ano-idd
+
+            // Para os Homens
             if (Homem) {
                 Homem = 'Homem'
                 resp.innerHTML = `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
@@ -216,6 +258,7 @@
                 }
             } 
             
+            // Para as Mulheres
             if (Mulher) {
                 Mulher = 'Mulher'
                 resp.innerHTML = `<p>Você é uma <strong>${Mulher}</strong> e tem <strong> ${idade} </strong> anos.</p>`
@@ -255,6 +298,7 @@
                 } 
             }
 
+            // Se caso digitar errado ou sem nada
             if (idd == '') {
                 resp.innerHTML = '<p>Você não digitou corretamente, tente novamente.</p>'
                 img.src = 'https://static.vecteezy.com/ti/vetor-gratis/p1/25255837-erro-icone-vetor.jpg'
