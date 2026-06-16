@@ -91,7 +91,7 @@ function checar() {
 
     // Se caso digitar errado ou sem nada
     if (idd == '') {
-        resp.innerHTML = '<p>Você <strong>não</strong> digitou corretamente, <strong>tente novamente.</strong></p>'
-        img.src = 'https://static.vecteezy.com/ti/vetor-gratis/p1/25255837-erro-icone-vetor.jpg'
+        resp.innerHTML = '<p>Você <strong>não</strong> digitou corretamente. <strong>Tente novamente!</strong></p>'
+        img.src = 'imagens/erro.jpg'
     }
 }
