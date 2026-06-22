@@ -15,7 +15,11 @@ function checar() {
         resp.innerHTML = `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
         img.src = 'imagens/homem.png'
 
-        if (idade <= 2) {
+        if (idade == 0) {
+            Homem = 'Neném'
+            resp.innerHTML = `<p>Você é um <strong> ${Homem} </strong> e tem <strong>${idade}</strong> aninhos.</p>`
+            img.src = 'imagens/nenem recem-nascido.png'
+        } else if (idade <= 2) {
             Homem = 'Criança'
             resp.innerHTML = `<p>Você é uma <strong> ${Homem} </strong> e tem <strong>${idade}</strong> anos.</p>`
             img.src = 'imagens/crianca de 2 anos.jpg'
@@ -55,7 +59,11 @@ function checar() {
         resp.innerHTML = `<p>Você é uma <strong>${Mulher}</strong> e tem <strong> ${idade} </strong> anos.</p>`
         img.src = 'imagens/mulher.jpg'
         
-        if (idade <= 2) {
+        if (idade == 0) {
+            Homem = 'Neném'
+            resp.innerHTML = `<p>Você é uma <strong> ${Homem} </strong> e tem <strong>${idade}</strong> aninhos.</p>`
+            img.src = 'imagens/bebe recem-nascido.jpg'
+        } else if (idade <= 2) {
             Mulher = 'Criança'
             resp.innerHTML = `<p>Você é uma <strong>${Mulher}</strong> e tem <strong> ${idade} </strong> anos.</p>`
             img.src = 'imagens/menina de 2 anos.png'
