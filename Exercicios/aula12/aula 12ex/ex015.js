@@ -90,7 +90,7 @@ function checar() {
     }
 
     // Se caso digitar errado ou sem nada
-    if (idd == '') {
+    if (idd == '' || idd > ano) {
         resp.innerHTML = '<p>Você <strong>não</strong> digitou corretamente. <strong>Tente novamente!</strong></p>'
         img.src = 'imagens/erro.jpg'
     }
