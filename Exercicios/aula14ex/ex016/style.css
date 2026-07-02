@@ -61,11 +61,12 @@ div input::placeholder {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
--webkit-appearance: none;
-margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 div .btn {
+    margin-top: 5px;
     height: 30px;
     border: none;
     background-color: rgb(0, 132, 255);
@@ -79,9 +80,10 @@ div .btn:hover {
     transform: translateY(-2px);
 }
 
-div .res p {
-    position: relative;
-    left: 30px;
+.res p {
+    padding-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 2px;
 }
 
 footer {
