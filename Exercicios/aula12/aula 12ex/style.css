@@ -14,8 +14,8 @@ body {
 
 h1 {
     position: relative;
-    display: flex;
-    justify-content: center;
+    display: block;
+    margin: auto;
     text-align: center;
     top: 140px;
 }
