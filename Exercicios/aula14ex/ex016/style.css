@@ -12,6 +12,8 @@ body {
 }
 
 h1 {
+    display: block;
+    margin: auto;
     text-align: center;
     padding-top: 30px;
 }
@@ -20,7 +22,7 @@ section {
     padding-bottom: 40px;
     display: block;
     margin: auto;
-    width: 400px;
+    width: 300px;
     padding: 20px;
     background-color: white;
     border-radius: 14px;
@@ -92,6 +94,8 @@ footer {
 }
 
 footer a {
+    display: block;
+    margin: auto;
     color: white;
     text-decoration: none;
     font-style: italic;
