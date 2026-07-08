@@ -4,7 +4,7 @@ function tabuada() {
     
 
     if (num == "") {
-        res.innerHTML = '<strong>Número invalido! Insira novamente. 🔁</strong>'
+        res.innerHTML += '<strong>Número invalido! Insira novamente. 🔁</strong>'
     } else if (num <= 1000) {
         for (let c = 1; c<=10; c++) {
             res.innerHTML += `${num} x ${c} = <strong>${num*c}</strong><br>`
@@ -12,6 +12,6 @@ function tabuada() {
             res.style.outline = '1px solid rgb(0, 132, 255)'
         }
     } else if (num > 1000) {
-        res.innerHTML = '<strong>Número invalido! Tente novamente🔁</strong>'
+        res.innerHTML += '<strong>Número invalido! Tente novamente🔁</strong>'
     }
 }
