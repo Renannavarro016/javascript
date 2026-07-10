@@ -4,12 +4,15 @@ function contar() {
     var p = Number(document.getElementById('pss').value)
     var result = document.querySelector('.res')
 
+    if (i.length == 0 || f.length == 0 || p.length == 0) {
+        result.innerHTML = '<strong>Resposta ínvalida. Tente novamente!</strong><br><br>'
+    }
     // Para o começo não ficar vazio
     result.innerHTML = `📍`
 
     // Para caso o user não coloque nada
     if (p <= 0) {
-        result.innerHTML = ('<strong>Resposta ínvalida, será contabilizado apenas passo 1 </strong><br><br>')
+        result.innerHTML = '<strong>Resposta ínvalida, será contabilizado apenas passo 1 </strong><br><br>'
         p = 1
     }  
 
