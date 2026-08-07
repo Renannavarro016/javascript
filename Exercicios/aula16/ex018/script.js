@@ -26,7 +26,7 @@ function add () {
         numeros.push(adc)
 
         // Estilos da lista
-        lst.innerHTML += `Valor ${adc} adicionado.<br>`
+        lst.innerHTML += `Valor <strong>${adc}</strong> adicionado.<br>`
         lst.style.border = '2px solid rgb(151, 196, 235)'
         lst.style.outline = '1px solid rgb(0, 132, 255)'
         lst.style.width = 'auto'
@@ -55,24 +55,24 @@ function Alist() {
 
 
     // Exibe os Resultados
-    
+
     // "length" usa para somar quantos valores tem adicionados ao total
-    res.innerHTML += `Ao todo temos <strong>${numeros.length}</strong> valores adicionados! <br><br><hr><br>`
+    res.innerHTML += `No <strong>total</strong> temos <strong>${numeros.length}</strong> valores adicionados! <br><br><hr><br>`
 
     // "Math.max e min" se usa para saber o valor maior ou menor adicionado na lista
-    res.innerHTML += `O maior valor adicionado foi <strong>${Math.max(...numeros)}</strong>.<br><br><hr><br>`
-    res.innerHTML += `O menor valor adicionado foi <strong>${Math.min(...numeros)}</strong>.<br><br><hr><br>`
+    res.innerHTML += `O <strong>maior</strong> valor adicionado foi <strong>${Math.max(...numeros)}</strong>.<br><br><hr><br>`
+    res.innerHTML += `O <strong>menor</strong> valor adicionado foi <strong>${Math.min(...numeros)}</strong>.<br><br><hr><br>`
 
     // Função para somar todos os valores da lista
     let soma = 0
     for (let n of numeros) {
         soma += n
     }
-    res.innerHTML += `A soma de todos os valores da lista é <strong>${soma}</strong>.<br><br><hr><br>`
+    res.innerHTML += `A <strong>soma</strong> de todos os valores da lista é <strong>${soma}</strong>.<br><br><hr><br>`
 
     // Função para calcular a média de todos os valores da lista
     let media = soma / numeros.length
-    res.innerHTML += `A média de todos os valores adicionados é <strong>${media.toFixed(2)}</strong>`
+    res.innerHTML += `A <strong>média</strong> de todos os valores adicionados é <strong>${media.toFixed(2)}</strong>`
 
     // Estilos da Lista
     res.style.border = '2px solid rgb(100, 100, 100)'
