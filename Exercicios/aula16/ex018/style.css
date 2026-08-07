@@ -72,6 +72,17 @@ div .n {
     text-align: center;
 }
 
+div .ad {
+    background-color: white;
+    font-weight: bolder;
+    transition: background-color .5s, transform .5s;
+}
+
+div .ad:hover {
+    background-color: rgb(11, 56, 107);
+    color: white;
+}
+
 div .btn {
     margin-top: 5px;
     height: 30px;
@@ -86,6 +97,17 @@ div .btn:hover {
     background-color: rgb(11, 56, 107);
     transform: translateY(-2px);
     cursor: pointer;
+}
+
+.lista {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+hr {
+    width: 75%;
+    margin: auto;
 }
 
 .res {

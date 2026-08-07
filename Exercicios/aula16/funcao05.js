@@ -15,8 +15,7 @@ console.log(fatorial(5))
 /*
 - Basicamente, a function funciona como um while onde a chamada final da function acontece antes.
 
-- O IF bloqueia um loop infinito, definindo valor minimo como 1 ja que nao precisamos 
-multiplicar o valor final por 1.
+- O IF bloqueia um loop infinito, definindo valor minimo como 1 ja que nao precisamos multiplicar o valor final por 1.
 
 - Como ele sempre tenta efetuar o fatorial e o proprio codigo manda ele voltar com -1
 ele guarda a operacao para quando o codigo parar de loopar e faz os fatorial anteriores primeiro
