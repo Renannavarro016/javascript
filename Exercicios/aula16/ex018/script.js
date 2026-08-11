@@ -1,4 +1,4 @@
-// Array que vai guardar os números
+// Array que vai guardar os números/valores
 let numeros = []  
 
 function add () {
