@@ -9,8 +9,10 @@ function add () {
     // Limpa o resultado caso o utilizador continue a adicionar
     res.innerHTML = ''
 
+    // Validação
+    
     // isNaN valida se um valor é realmente um número
-    if (adc === "" || isNaN(adc)) { 
+    if (adc == "" || isNaN(adc)) { 
         alert('Por favor digite um número!')
     
     // Para os valores que estiverem fora de 1 a 100
