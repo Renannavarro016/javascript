@@ -49,6 +49,14 @@ function Alist() {
     // Limpa o conteúdo anterior
     res.innerHTML = ''
 
+    // Estilos da Lista
+        res.style.border = '2px solid rgb(100, 100, 100)'
+        res.style.outline = '1px solid rgb(24, 24, 24)'
+        res.style.width = 'auto'
+        res.style.alignItems = 'center'
+        res.style.margin = '30px'
+        res.style.padding = '10px'
+
     // Caso o user finalize antes de digitar algo ou a lista esteja vazia
     if (numeros.length === 0) {
         alert('Por favor, adicione valores antes de finalizar!!')
@@ -75,12 +83,4 @@ function Alist() {
     // Função para calcular a média de todos os valores da lista
     let media = soma / numeros.length
     res.innerHTML += `A <strong>média</strong> de todos os valores adicionados é <strong>${media.toFixed(2)}</strong>`
-
-    // Estilos da Lista
-    res.style.border = '2px solid rgb(100, 100, 100)'
-        res.style.outline = '1px solid rgb(24, 24, 24)'
-        res.style.width = 'auto'
-        res.style.alignItems = 'center'
-        res.style.margin = '30px'
-        res.style.padding = '10px'
 }
