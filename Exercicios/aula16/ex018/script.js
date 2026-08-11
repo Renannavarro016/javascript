@@ -11,15 +11,15 @@ function add () {
 
     // isNaN valida se um valor é realmente um número
     if (adc === "" || isNaN(adc)) { 
-        alert('Por favor digite um número.')
+        alert('Por favor digite um número!')
     
     // Para os valores que estiverem fora de 1 a 100
     } else if (adc < 1 || adc > 100) {
-       alert('Número invalido! digite valores de 1 a 100.')
+       alert('Número invalido! digite apenas valores de 1 a 100.')
 
     // "indexOf ou includes" Usa para localizar um valor dentro de uma lista/Array ou se ele está incluso
     } else if (numeros.includes(adc)) {  
-        alert('Número ja adicionado a lista!')
+        alert('Número já adicionado na lista!')
     } else {
 
         // "push" adiciona os valores colocados dentro de um Array ou lista
@@ -49,7 +49,7 @@ function Alist() {
 
     // Caso o user finalize antes de digitar algo ou a lista esteja vazia
     if (numeros.length === 0) {
-        alert('Por favor adicione valores antes de finalizar!!')
+        alert('Por favor, adicione valores antes de finalizar!!')
         return
     }
 
