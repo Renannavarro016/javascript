@@ -1,11 +1,5 @@
-export default User;
-import User from 'arquivo.js';
 
-export function user() {};
-import { user } from 'arquivo.js';
-
-
-class superHero {
+export default class superHero {
     constructor(name, power) {
         this.name = name;
         this.power = power;
