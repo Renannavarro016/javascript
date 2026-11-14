@@ -7,12 +7,12 @@ export default class superHero {
 }
 
 
-function printHeroName(hero) {
+export function printHeroName(hero) {
     console.log(`Superhero name is: ${hero.name}`);
 }
 
 
-function printHeroPower(hero) {
+export function printHeroPower(hero) {
     console.log(`Superhero power is: ${hero.power}`);
 }
 

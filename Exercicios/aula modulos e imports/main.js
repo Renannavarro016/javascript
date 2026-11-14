@@ -1,9 +1,14 @@
-import Hero from './superHero.class.js';
 
-const name = 'Clark Kent';
-const power = 'Super força';
+import Hero, { printHeroName as HeroName, printHeroPower as HeroPower } from './superHero.class.js';
 
-const hero = new Hero(name, 'Superman', power, 'visao raio-x');
+const name = 'Superman';
+const power = 'Visão Raio-x';
 
-console.log(hero.name);
-console.log(hero.power);
+const hero = new Hero(name, 'Raio-x', power, 'Visão raio-x');
+
+HeroName(hero);
+HeroPower(hero);
+
+
+//console.log(hero.name);
+//console.log(hero.power);
